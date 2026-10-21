@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="ResumeIQ — AI Resume Analyzer. Get your instant ATS score, keyword match and personalized improvement tips." />
+<meta name="theme-color" content="#070b14" />
+<title>ResumeIQ — AI Resume Analyzer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ANIMATED BACKGROUND -->
+<div class="bg" aria-hidden="true">
+  <div class="bg__grid"></div>
+  <div class="orb orb--1"></div>
+  <div class="orb orb--2"></div>
+  <div class="orb orb--3"></div>
+</div>
+
+<!-- NAVBAR -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="#home" class="brand" aria-label="ResumeIQ home">
+      <span class="brand__mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <path d="M14 2v6h6"/>
+          <path d="M9 15l2 2 4-4"/>
+        </svg>
+      </span>
+      <span class="brand__text">Resume<strong>IQ</strong></span>
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#home" class="nav__link is-active">Home</a>
+      <a href="#analyzer" class="nav__link">Analyzer</a>
+      <a href="#features" class="nav__link">Features</a>
+      <a href="#how" class="nav__link">How it works</a>
+      <a href="#reviews" class="nav__link">Reviews</a>
+      <a href="#analyzer" class="btn btn--primary btn--sm nav__cta">Analyze Free</a>
+    </nav>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container hero__inner">
+
+      <div class="hero__copy">
+        <span class="pill reveal">
+          <span class="pill__dot"></span> AI-Powered Resume Intelligence
+        </span>
+
+        <h1 class="hero__title reveal">
+          Beat the ATS.<br />
+          <span class="grad">Land more interviews.</span>
+        </h1>
+
+        <p class="hero__sub reveal">
+          Upload your resume and get an instant, recruiter-grade analysis — ATS score,
+          keyword matching, section detection and actionable fixes. No signup. No upload to servers.
+        </p>
+
+        <div class="hero__actions reveal">
+          <a href="#analyzer" class="btn btn--primary btn--lg">
+            Analyze My Resume
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#how" class="btn btn--ghost btn--lg">See how it works</a>
+        </div>
+
+        <ul class="hero__stats reveal">
+          <li><strong data-count="120">0</strong><span>Resumes analyzed</span></li>
+          <li><strong data-count="94">0</strong><span>% Accuracy rate</span></li>
+          <li><strong data-count="38">0</strong><span>% More callbacks</span></li>
+        </ul>
+      </div>
+
+      <div class="hero__visual reveal">
+        <div class="mock">
+          <div class="mock__top">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="mock__file">resume_report.pdf</span>
+          </div>
+
+          <div class="mock__body">
+            <div class="mock__ring">
+              <svg viewBox="0 0 120 120">
+                <circle class="ring__track" cx="60" cy="60" r="52" />
+                <circle class="ring__value" cx="60" cy="60" r="52" />
+              </svg>
+              <div class="mock__score">
+                <b>92</b>
+                <span>ATS Score</span>
+              </div>
+            </div>
+
+            <div class="mock__bars">
+              <div class="mock__bar"><span>Keyword Match</span><i style="--w:88%; --d:.15s"></i></div>
+              <div class="mock__bar"><span>Formatting</span><i style="--w:95%; --d:.3s"></i></div>
+              <div class="mock__bar"><span>Impact Verbs</span><i style="--w:74%; --d:.45s"></i></div>
+              <div class="mock__bar"><span>Readability</span><i style="--w:81%; --d:.6s"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="float-card float-card--1">
+          <span class="float-card__icon float-card__icon--good">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </span>
+          <div><b>+38%</b><small>Interview rate</small></div>
+        </div>
+
+        <div class="float-card float-card--2">
+          <span class="float-card__icon float-card__icon--bolt">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L4.5 13.5H11L10 22l8.5-11.5H12z"/></svg>
+          </span>
+          <div><b>3 sec</b><small>Avg. analysis</small></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>ATS Optimized</span><span>•</span><span>Keyword Intelligence</span><span>•</span>
+        <span>Section Detection</span><span>•</span><span>Impact Scoring</span><span>•</span>
+        <span>Grammar Check</span><span>•</span><span>Role Matching</span><span>•</span>
+        <span>ATS Optimized</span><span>•</span><span>Keyword Intelligence</span><span>•</span>
+        <span>Section Detection</span><span>•</span><span>Impact Scoring</span><span>•</span>
+        <span>Grammar Check</span><span>•</span><span>Role Matching</span><span>•</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANALYZER -->
+  <section class="section" id="analyzer">
+    <div class="container">
+
+      <div class="section__head reveal">
+        <span class="pill"><span class="pill__dot"></span> Free AI Analyzer</span>
+        <h2>Upload your resume. Get your report.</h2>
+        <p>Our engine scans structure, keywords, formatting and impact — then tells you exactly what to fix.</p>
+      </div>
+
+      <div class="analyzer">
+
+        <!-- UPLOAD CARD -->
+        <div class="card reveal" id="uploadCard">
+          <div class="card__head">
+            <h3>1. Upload Resume</h3>
+            <span class="badge badge--live"><span></span> Ready</span>
+          </div>
+
+          <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Upload your resume">
+            <input type="file" id="fileInput" accept=".pdf,.doc,.docx,.txt" hidden />
+
+            <div class="dropzone__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <path d="M17 8l-5-5-5 5"/>
+                <path d="M12 3v13"/>
+              </svg>
+            </div>
+
+            <h4>Drag &amp; drop your resume</h4>
+            <p>or <button type="button" class="link" id="browseBtn">browse your files</button></p>
+            <span class="dropzone__hint">PDF, DOC, DOCX, TXT &nbsp;•&nbsp; Max 5 MB</span>
+          </div>
+
+          <div class="file-info" id="fileInfo" hidden>
+            <span class="file-info__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/>
+              </svg>
+            </span>
+            <div class="file-info__meta">
+              <b id="fileName">resume.pdf</b>
+              <small id="fileSize">0 KB</small>
+            </div>
+            <button type="button" class="icon-btn" id="removeFile" aria-label="Remove file">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+          </div>
+
+          <div class="field">
+            <label for="roleSelect">Target role <span>(optional)</span></label>
+            <select id="roleSelect">
+              <option value="general">General / Any role</option>
+              <option value="frontend">Frontend Developer</option>
+              <option value="backend">Backend Developer</option>
+              <option value="fullstack">Full Stack Developer</option>
+              <option value="data">Data Analyst / Scientist</option>
+              <option value="designer">UI/UX Designer</option>
+              <option value="pm">Product Manager</option>
+              <option value="marketing">Digital Marketing</option>
+            </select>
+          </div>
+
+          <button class="btn btn--primary btn--block btn--lg" id="analyzeBtn" disabled>
+            <span class="btn__label">Analyze Resume</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+
+          <p class="note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            100% private — analysis runs locally in your browser.
+          </p>
+        </div>
+
+        <!-- RESULT CARD -->
+        <div class="card card--result reveal" id="resultCard">
+          <div class="card__head">
+            <h3>2. AI Report</h3>
+            <span class="badge" id="statusBadge">Awaiting file</span>
+          </div>
+
+          <div class="state state--empty" id="resultEmpty">
+            <div class="scan-illustration">
+              <div class="scan-illustration__doc">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="scan-illustration__line"></div>
+            </div>
+            <h4>Your report will appear here</h4>
+            <p>Upload a resume on the left and hit <b>Analyze Resume</b> to see your ATS score, keyword match and personalized fixes.</p>
+          </div>
+
+          <div class="state state--loading" id="resultLoading" hidden>
+            <div class="loader">
+              <div class="loader__ring"></div>
+              <div class="loader__core">AI</div>
+            </div>
+
+            <div class="progress">
+              <div class="progress__bar" id="progressBar"></div>
+            </div>
+
+            <ul class="steps" id="stepsList">
+              <li data-step="0"><span class="steps__tick"></span> Parsing document structure</li>
+              <li data-step="1"><span class="steps__tick"></span> Extracting keywords &amp; entities</li>
+              <li data-step="2"><span class="steps__tick"></span> Matching against ATS rules</li>
+              <li data-step="3"><span class="steps__tick"></span> Scoring &amp; generating insights</li>
+            </ul>
+          </div>
+
+          <div class="state state--data" id="resultData" hidden>
+
+            <div class="score-row">
+              <div class="score-ring">
+                <svg viewBox="0 0 160 160">
+                  <circle class="score-ring__track" cx="80" cy="80" r="70" />
+                  <circle class="score-ring__value" id="scoreCircle" cx="80" cy="80" r="70" />
+                </svg>
+                <div class="score-ring__center">
+                  <b id="scoreValue">0</b>
+                  <small>Overall</small>
+                </div>
+              </div>
+
+              <div class="score-meta">
+                <h4 id="gradeTitle">Good Match</h4>
+                <p id="gradeText">Your resume is competitive but has room to improve.</p>
+                <div class="chips" id="gradeChips"></div>
+              </div>
+            </div>
+
+            <div class="metrics" id="metrics"></div>
+
+            <div class="block">
+              <h5>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                Matched Keywords
+              </h5>
+              <div class="chips chips--good" id="matchedSkills"></div>
+            </div>
+
+            <div class="block">
+              <h5>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><circle cx="12" cy="12" r="10"/></svg>
+                Missing Keywords
+              </h5>
+              <div class="chips chips--miss" id="missingSkills"></div>
+            </div>
+
+            <div class="block">
+              <h5>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+                AI Suggestions
+              </h5>
+              <ul class="suggestions" id="suggestions"></ul>
+            </div>
+
+            <div class="block">
+              <h5>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+                Sections Detected
+              </h5>
+              <div class="sections" id="sections"></div>
+            </div>
+
+            <div class="result-actions">
+              <button class="btn btn--primary" id="downloadBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+                Download Report
+              </button>
+              <button class="btn btn--ghost" id="resetBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+                Analyze Another
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="pill"><span class="pill__dot"></span> Capabilities</span>
+        <h2>Everything a recruiter checks — automated</h2>
+        <p>Trained on real hiring criteria from thousands of job descriptions across tech, design and business roles.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="feature reveal">
+          <span class="feature__icon feature__icon--cyan">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
+          </span>
+          <h3>ATS Compatibility Score</h3>
+          <p>Know instantly whether applicant tracking systems can parse your file, headings and dates correctly.</p>
+        </article>
+
+        <article class="feature reveal">
+          <span class="feature__icon feature__icon--violet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          </span>
+          <h3>Keyword Intelligence</h3>
+          <p>Semantic matching finds the exact skills and tools hiring managers search for — and the ones you're missing.</p>
+        </article>
+
+        <article class="feature reveal">
+          <span class="feature__icon feature__icon--green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.9 6.3L21 9.6l-4.5 4.4 1.1 6.6L12 17.5 6.4 20.6l1.1-6.6L3 9.6l6.1-1.3z"/></svg>
+          </span>
+          <h3>Impact Scoring</h3>
+          <p>Detects weak phrasing and suggests measurable, action-driven bullet points that recruiters remember.</p>
+        </article>
+
+        <article class="feature reveal">
+          <span class="feature__icon feature__icon--amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+          </span>
+          <h3>Section Detection</h3>
+          <p>Verifies that your contact info, summary, experience, education and skills are all present and readable.</p>
+        </article>
+
+        <article class="feature reveal">
+          <span class="feature__icon feature__icon--pink">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </span>
+          <h3>Private by Design</h3>
+          <p>Your resume never leaves your device. All parsing and scoring happens locally inside the browser.</p>
+        </article>
+
+        <article class="feature reveal">
+          <span class="feature__icon feature__icon--blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11L10 22l8.5-11.5H12z"/></svg>
+          </span>
+          <h3>Instant Results</h3>
+          <p>No queues, no waiting, no email required. Full report generated in under three seconds.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="pill"><span class="pill__dot"></span> Process</span>
+        <h2>Three steps to a stronger resume</h2>
+        <p>Built to be fast enough to use before every single application.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <span class="step-card__num">01</span>
+          <h3>Upload</h3>
+          <p>Drop in your PDF, DOC or DOCX file. We read the text layer exactly like an ATS would.</p>
+        </div>
+        <div class="step-card reveal">
+          <span class="step-card__num">02</span>
+          <h3>Analyze</h3>
+          <p>Our engine scores formatting, keywords, readability, impact verbs and section completeness.</p>
+        </div>
+        <div class="step-card reveal">
+          <span class="step-card__num">03</span>
+          <h3>Improve</h3>
+          <p>Apply the prioritized suggestions, re-upload and watch your score climb in real time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="pill"><span class="pill__dot"></span> Testimonials</span>
+        <h2>Trusted by job seekers worldwide</h2>
+        <p>Over 128,000 resumes analyzed and counting.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <figure class="review reveal">
+          <div class="review__stars">★★★★★</div>
+          <blockquote>"I applied to 40 jobs with no reply. After fixing the keywords ResumeIQ flagged, I had 3 interviews in a week."</blockquote>
+          <figcaption>
+            <span class="avatar">AR</span>
+            <div><b>Ananya R.</b><small>Frontend Developer</small></div>
+          </figcaption>
+        </figure>
+
+        <figure class="review reveal">
+          <div class="review__stars">★★★★★</div>
+          <blockquote>"The ATS score is scarily accurate. My resume was getting mangled by the parser — this showed me exactly why."</blockquote>
+          <figcaption>
+            <span class="avatar">MK</span>
+            <div><b>Marcus K.</b><small>Data Analyst</small></div>
+          </figcaption>
+        </figure>
+
+        <figure class="review reveal">
+          <div class="review__stars">★★★★★</div>
+          <blockquote>"Clean, fast and no signup. I use it before every application now. Took my score from 61 to 93."</blockquote>
+          <figcaption>
+            <span class="avatar">SP</span>
+            <div><b>Sofia P.</b><small>Product Manager</small></div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta reveal">
+        <div class="cta__glow" aria-hidden="true"></div>
+        <h2>Your next interview starts with a better resume</h2>
+        <p>Free, instant and completely private. No account needed.</p>
+        <a href="#analyzer" class="btn btn--primary btn--lg">
+          Analyze My Resume Now
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="#home" class="brand">
+        <span class="brand__mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/>
+          </svg>
+        </span>
+        <span class="brand__text">Resume<strong>IQ</strong></span>
+      </a>
+      <p>AI-powered resume intelligence for modern job seekers.</p>
+    </div>
+
+    <nav class="footer__links">
+      <div>
+        <h6>Product</h6>
+        <a href="#analyzer">Analyzer</a>
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+      </div>
+      <div>
+        <h6>Company</h6>
+        <a href="#reviews">Reviews</a>
+        <a href="#home">About</a>
+        <a href="#home">Contact</a>
+      </div>
+      <div>
+        <h6>Legal</h6>
+        <a href="#home">Privacy</a>
+        <a href="#home">Terms</a>
+        <a href="#home">Security</a>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>© <span id="year">2025</span> ResumeIQ. All rights reserved.</p>
+    <p class="footer__note">Results are AI-generated estimates and should be used as guidance.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
