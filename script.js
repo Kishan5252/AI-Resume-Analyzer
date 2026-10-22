@@ -1,14 +1,9 @@
-/* =========================================================
-   ResumeIQ — AI Resume Analyzer
-   All interactivity in one file.
-   ========================================================= */
+
 
 (function () {
   'use strict';
 
-  /* ---------------------------------------------------------
-     0. HELPERS
-     --------------------------------------------------------- */
+  
   const $ = (sel, ctx) => (ctx || document).querySelector(sel);
   const $$ = (sel, ctx) => Array.from((ctx || document).querySelectorAll(sel));
   const clamp = (n, min, max) => Math.min(max, Math.max(min, n));
