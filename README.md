@@ -1,2 +1,3 @@
 # AI-Resume-Analyzer
-Python based AI Resume Analyzer
+Java based AI Resume Analyzer
+
