@@ -1,3 +1,3 @@
 # AI-Resume-Analyzer
-Java based AI Resume Analyzer
+   AI Resume Analyzer
 
